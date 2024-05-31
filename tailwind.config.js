@@ -33,16 +33,16 @@ export default {
         lineHeight: '1.25',
       }],
       '6xl': ['3.75rem', {
-        lineHeight: '1.25',
+        lineHeight: '1.35',
       }],
       '7xl': ['4.5rem', {
-        lineHeight: '1.25',
+        lineHeight: '1.35',
       }],
       '8xl': ['6rem', {
-        lineHeight: '1.25',
+        lineHeight: '1.35',
       }],
       '9xl': ['8rem', {
-        lineHeight: '1.25',
+        lineHeight: '1.35',
       }],
     },
     extend: {},
