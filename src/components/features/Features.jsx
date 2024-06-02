@@ -1,14 +1,16 @@
 import GradientTitle from "../Shared/GradientTitle";
+import SectionBadge from "../Shared/SectionBadge";
+import SectionWrapper from "../Shared/SectionWrapper";
 import Feature from "./Feature";
 
 const Features = () => {
   return (
-    <div className="flex flex-col justify-center items-center p-8 text-center container mx-auto">
-      <div className="py-8">
-        <div className="badge badge-lg h-12 badge-outline p-4 rounded-lg font-semibold text-2xl">
-          Features
+    <SectionWrapper>
+      <div className="flex flex-col gap-4 justify-center items-center mb-16">
+        <SectionBadge title="Features" />
+        <div className="max-w-screen-lg mx-auto">
+          <GradientTitle title="We can build your dream product into a cross-platform juggarnaut" textSize="lg" fontWeight="medium" />
         </div>
-        <GradientTitle title="We can build your dream product into a cross-platform juggarnaut" />
       </div>
       <Feature
         title="Custom Software"
@@ -20,7 +22,7 @@ const Features = () => {
         // startGradient={"primary/50"}
         // endGradient={"secondary/50"}
       />
-    </div>
+    </SectionWrapper>
   );
 };
 

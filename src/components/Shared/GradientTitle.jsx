@@ -7,7 +7,11 @@ const GradientTitle = ({ title, additionalClasses = "", textSize, fontWeight }) 
     } else if (textSize === "lg") {
       return "text-5xl";
     } else if (textSize === "xl") {
+      return "text-7xl";
+    } else if (textSize === "2xl") {
       return "text-8xl";
+    } else if (textSize === "3xl") {
+      return "text-9xl";
     }
     return "text-6xl";
   }

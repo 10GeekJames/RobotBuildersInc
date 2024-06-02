@@ -2,7 +2,7 @@ import GradientTitle from "../Shared/GradientTitle";
 
 const Value = ({ icon, title, description }) => {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 items-center lg:items-start text-center lg:text-start">
       <div className="w-12 h-12">
         {icon}
       </div>

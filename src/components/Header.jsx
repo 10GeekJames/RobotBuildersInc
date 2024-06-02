@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const MenuOptions = () => {
   const handleMenuItemClick = (e) => {
     e.preventDefault();
-    console.log(e.target.parentElement.parentElement.parentElement);
+    // console.log(e.target.parentElement.parentElement.parentElement);
     e.target.parentElement.parentElement.parentElement.removeAttribute("open");
     document.activeElement.blur();
     document.querySelectorAll("details").forEach((detail) => {
@@ -15,7 +15,7 @@ const MenuOptions = () => {
 
   const handleNewMenuClick = (e) => {
     // e.preventDefault();
-    console.log(document.activeElement);
+    // console.log(document.activeElement);
     document.querySelectorAll("details").forEach((detail) => {
       if (detail !== e.target.parentElement) {
         detail.removeAttribute("open");
@@ -67,9 +67,18 @@ const MenuOptions = () => {
 const Header = () => {
   const [openDropdown, setOpenDropdown] = useState(false);
 
+  useEffect(() => {
+    document.addEventListener("click", () => {
+      if (document.activeElement.tagName == "BODY") {
+        // console.log("body clicked");
+        setOpenDropdown(false);
+      }
+    });
+  }, []);
+
   const handleMobileMenuClick = (e) => {
     // e.preventDefault();
-    console.log(e.target.tagName);
+    console.log(document.activeElement.tagName);
     if (e.target.tagName !== "SUMMARY") {
       if (openDropdown) {
         document.activeElement.blur();
@@ -79,23 +88,21 @@ const Header = () => {
   };
 
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100" onClick={handleMobileMenuClick}>
       <div className="navbar-start">
         <a className="btn btn-ghost text-xl ">RobotBuildersInc</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu menu-horizontal px-1 z-[2]">
           <MenuOptions />
         </ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Button</a>
-      </div>
+      <div className="navbar-end">{/* <a className="btn">Button</a> */}</div>
       <div className="dropdown" onClick={handleMobileMenuClick}>
-        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+        <div tabIndex={0} role="button" className={`btn btn-ghost lg:hidden swap ${openDropdown && "swap-active"}`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5"
+            className="h-5 w-5 swap-off"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -107,10 +114,19 @@ const Header = () => {
               d="M4 6h16M4 12h8m-8 6h16"
             />
           </svg>
+          <svg
+            className="swap-on h-5 w-5 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 512 512"
+          >
+            <polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
+          </svg>
         </div>
         <ul
           tabIndex={0}
-          className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 -translate-x-3/4 lg:-translate-x-full"
+          className="menu menu-sm dropdown-content mt-3 z-[2] p-2 shadow bg-base-100 rounded-box w-52 -translate-x-3/4 lg:-translate-x-full"
         >
           <MenuOptions />
         </ul>
