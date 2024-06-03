@@ -1,4 +1,3 @@
-import SectionWrapper from "./Shared/SectionWrapper";
 import ThemeController from "./Shared/ThemeController";
 
 const Footer = ({theme, handleThemeChange}) => {

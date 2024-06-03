@@ -21,7 +21,7 @@ const Feature = ({ title, subTitle, image, description, hasGradient, startGradie
       </div>
       <div className={`${reverse ? "text-end" : ""}`}>
         <GradientTitle title={subTitle} />
-        <p className="text-xl">{description}</p>
+        <p className="text-xl pt-8">{description}</p>
       </div>
     </div>
   )

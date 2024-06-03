@@ -1,17 +1,10 @@
 import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Header from './components/Header'
-import Hero from './components/Hero'
-import Features from './components/features/Features'
-import Values from './components/values/Values'
-import Tesitmonials from './components/testimonials/Testimonials'
-import CallToAction from './components/CallToAction'
-import Footer from './components/Footer'
-import LightDarkToggle from './components/Shared/LightDarkToggle'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import LightDarkToggle from '../components/Shared/LightDarkToggle'
+import { Outlet } from 'react-router-dom'
 
-function App() {
+function MainLayout() {
   const [count, setCount] = useState(0)
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "default");
 
@@ -39,14 +32,10 @@ function App() {
         <LightDarkToggle theme={theme} handleThemeChange={handleThemeChange} />
       </div>
       <Header />
-      <Hero />
-      <Features />
-      <Values />
-      <Tesitmonials />
-      <CallToAction />
+      <Outlet />
       <Footer theme={theme} handleThemeChange={handleThemeChange} />
     </>
   )
 }
 
-export default App
+export default MainLayout;

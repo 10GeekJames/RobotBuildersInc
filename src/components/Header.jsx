@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const MenuOptions = () => {
   const handleMenuItemClick = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     // console.log(e.target.parentElement.parentElement.parentElement);
     e.target.parentElement.parentElement.parentElement.removeAttribute("open");
     document.activeElement.blur();
@@ -26,17 +27,17 @@ const MenuOptions = () => {
   return (
     <>
       <li>
-        <a onClick={handleMenuItemClick}>Home</a>
+        <Link to={'/home'} onClick={handleMenuItemClick}>Home</Link>
       </li>
       <li>
         <details>
           <summary onClick={handleNewMenuClick}>Services</summary>
           <ul className="p-2">
             <li>
-              <a onClick={handleMenuItemClick}>Submenu 1</a>
+              <Link to={'/home'} onClick={handleMenuItemClick}>Submenu 1</Link>
             </li>
             <li>
-              <a onClick={handleMenuItemClick}>Submenu 2</a>
+              <Link to={'/home'} onClick={handleMenuItemClick}>Submenu 2</Link>
             </li>
           </ul>
         </details>
@@ -46,19 +47,19 @@ const MenuOptions = () => {
           <summary onClick={handleNewMenuClick}>Portfolio</summary>
           <ul className="p-2">
             <li>
-              <a onClick={handleMenuItemClick}>Submenu 1</a>
+              <Link to={'/portfolio'} onClick={handleMenuItemClick}>Summary</Link>
             </li>
             <li>
-              <a onClick={handleMenuItemClick}>Submenu 2</a>
+              <Link to={'/home'} onClick={handleMenuItemClick}>Submenu 2</Link>
             </li>
           </ul>
         </details>
       </li>
       <li>
-        <a onClick={handleMenuItemClick}>About Us</a>
+        <Link to={'/aboutus'} onClick={handleMenuItemClick}>About Us</Link>
       </li>
       <li>
-        <a onClick={handleMenuItemClick}>Contact</a>
+        <Link to={'/contactus'} onClick={handleMenuItemClick}>Contact</Link>
       </li>
     </>
   );
@@ -90,14 +91,14 @@ const Header = () => {
   return (
     <div className="navbar bg-base-100" onClick={handleMobileMenuClick}>
       <div className="navbar-start">
-        <a className="btn btn-ghost text-xl ">RobotBuildersInc</a>
+        <Link className="btn btn-ghost text-xl ">RobotBuildersInc</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 z-[2]">
           <MenuOptions />
         </ul>
       </div>
-      <div className="navbar-end">{/* <a className="btn">Button</a> */}</div>
+      <div className="navbar-end">{/* <Link className="btn">Button</Link> */}</div>
       <div className="dropdown" onClick={handleMobileMenuClick}>
         <div tabIndex={0} role="button" className={`btn btn-ghost lg:hidden swap ${openDropdown && "swap-active"}`}>
           <svg

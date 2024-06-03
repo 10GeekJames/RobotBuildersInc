@@ -4,7 +4,7 @@ import SectionWrapper from "./Shared/SectionWrapper";
 const CallToAction = () => {
   return (
     <SectionWrapper bgColor="bg-base-200">
-      <div className="grid lg:grid-cols-2 text-start overflow-hidden">
+      <div id="contact" className="grid lg:grid-cols-2 text-start overflow-hidden">
         <div className="flex flex-col gap-8 justify-center items-center text-center lg:text-start lg:items-start order-2 lg:order-1">
           <GradientTitle title="Ready to make your dream a reality, get prototype ready?" textSize="lg" fontWeight="medium" />
           <button className="bg-primary rounded-lg p-4 text-black">Get in touch</button>
