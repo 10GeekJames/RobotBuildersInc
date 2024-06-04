@@ -1,4 +1,4 @@
-import ThemeController from "./Shared/ThemeController";
+import ThemeController from "./shared/ThemeController";
 
 const Footer = ({theme, handleThemeChange}) => {
   return (

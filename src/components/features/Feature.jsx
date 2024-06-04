@@ -1,4 +1,4 @@
-import GradientTitle from "../Shared/GradientTitle"
+import GradientTitle from "../shared/GradientTitle"
 
 const Feature = ({ title, subTitle, image, description, hasGradient, startGradient, endGradient, reverse }) => {
   const getGradient = () => {

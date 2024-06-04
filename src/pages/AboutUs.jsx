@@ -1,5 +1,5 @@
-import GradientTitle from "../components/Shared/GradientTitle";
-import SectionWrapper from "../components/Shared/SectionWrapper";
+import GradientTitle from "../components/shared/GradientTitle";
+import SectionWrapper from "../components/shared/SectionWrapper";
 
 const AboutUs = () => {
   return (

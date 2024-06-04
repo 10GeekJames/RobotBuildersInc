@@ -1,6 +1,6 @@
-import GradientTitle from "../Shared/GradientTitle";
-import SectionBadge from "../Shared/SectionBadge";
-import SectionWrapper from "../Shared/SectionWrapper";
+import GradientTitle from "../shared/GradientTitle";
+import SectionBadge from "../shared/SectionBadge";
+import SectionWrapper from "../shared/SectionWrapper";
 import Feature from "./Feature";
 
 const Features = () => {

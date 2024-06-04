@@ -1,5 +1,5 @@
-import GradientTitle from "./Shared/GradientTitle";
-import SectionWrapper from "./Shared/SectionWrapper";
+import GradientTitle from "./shared/GradientTitle";
+import SectionWrapper from "./shared/SectionWrapper";
 
 const CallToAction = () => {
   return (

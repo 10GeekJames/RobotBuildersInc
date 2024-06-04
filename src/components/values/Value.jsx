@@ -1,4 +1,4 @@
-import GradientTitle from "../Shared/GradientTitle";
+import GradientTitle from "../shared/GradientTitle";
 
 const Value = ({ icon, title, description }) => {
   return (

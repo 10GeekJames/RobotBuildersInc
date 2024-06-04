@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import LightDarkToggle from '../components/Shared/LightDarkToggle'
+import LightDarkToggle from '../components/shared/LightDarkToggle'
 import { Outlet } from 'react-router-dom'
 
 function MainLayout() {

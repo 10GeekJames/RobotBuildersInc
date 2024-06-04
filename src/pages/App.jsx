@@ -4,8 +4,8 @@ import Features from '../components/features/Features'
 import Values from '../components/values/Values'
 import Tesitmonials from '../components/testimonials/Testimonials'
 import CallToAction from '../components/CallToAction'
-import GradientTitle from '../components/Shared/GradientTitle'
-import SectionWrapper from '../components/Shared/SectionWrapper'
+import GradientTitle from '../components/shared/GradientTitle'
+import SectionWrapper from '../components/shared/SectionWrapper'
 import { Link } from 'react-router-dom'
 
 function App() {

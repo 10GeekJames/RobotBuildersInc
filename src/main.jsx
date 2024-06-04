@@ -9,6 +9,7 @@ import './styles/staticindex.css'
 import ErrorPage from './pages/ErrorPage.jsx';
 import MainLayout from './layouts/MainLayout.jsx';
 import AboutUs from './pages/AboutUs.jsx';
+import PortFolio from './pages/Portfolio.jsx';
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/portfolio",
-        element: <div className="h-screen"><h1>Portfolio Page</h1></div>,
+        element: <PortFolio />,
       },
       {
         path: "/aboutus",
