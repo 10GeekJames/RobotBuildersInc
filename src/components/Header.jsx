@@ -73,14 +73,14 @@ const Header = () => {
   useEffect(() => {
     document.addEventListener("click", () => {
       if (document.activeElement.tagName == "BODY") {
-        // console.log("body clicked");
+        console.log("body clicked");
         setOpenDropdown(false);
       }
     });
   }, []);
 
   const handleMobileMenuClick = (e) => {
-    // e.preventDefault();
+    e.stopPropagation()
     console.log(document.activeElement.tagName);
     if (e.target.tagName !== "SUMMARY") {
       if (openDropdown) {
@@ -90,10 +90,15 @@ const Header = () => {
     }
   };
 
+  const handleLogoClick = (e) => {
+    e.stopPropagation()
+    if (openDropdown) setOpenDropdown(false);
+  }
+
   return (
     <div className="navbar bg-base-100" onClick={handleMobileMenuClick}>
       <div className="navbar-start">
-        <Link className="btn btn-ghost text-xl h-16 w-68 text-primary">
+        <Link to={'/'} className="btn btn-ghost text-xl h-16 w-68 text-primary z-[1]" onClick={handleLogoClick}>
           <RBIFullIcon />
         </Link>
       </div>
