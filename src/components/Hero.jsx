@@ -3,7 +3,7 @@ import GradientTitle from "./shared/GradientTitle";
 const Hero = () => {
   return (
   <div className="hero min-h-screen">
-    <div className="hero-overlay dark:bg-neutral bg-opacity-60"></div>
+    <div className="hero-overlay bg-neutral bg-opacity-60"></div>
     <div className="hero-content text-neutral-content w-full py-16">
       <div className="flex flex-col lg:flex-row w-full gap-8">
         <div className="max-w-md flex flex-col items-center text-center mx-auto lg:items-start lg:text-start justify-center gap-4">

@@ -2,7 +2,7 @@ import GradientTitle from "../shared/GradientTitle";
 
 const Project = ({projectLogo, projectName, description, tagLine, taglineDescription}) => {
   return (
-    <div className="flex flex-col lg:flex-row mt-12 border rounded-2xl shadow-lg dark:shadow-white">
+    <div className="flex flex-col lg:flex-row mt-12 border rounded-2xl shadow-lg">
       <div className="p-8 border-b rounded-b-2xl lg:border-r lg:rounded-r-2xl border-t-4 rounded-t-2xl border-t-primary">
         <div className="flex items-center gap-2">
           <div className="w-12 h-12">

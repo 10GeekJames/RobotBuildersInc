@@ -31,7 +31,7 @@ const GradientTitle = ({ title, additionalClasses = "", textSize, fontWeight }) 
     return "font-bold";
   }
   return (
-    <h1 className={`${getTextSize()} text-balance ${getFontWeight()} inline-block bg-gradient-to-t from-slate-900/20 dark:from-neutral-content/20 from-5% dark:from-25% to-slate-900 dark:to-neutral-content text-transparent bg-clip-text ${additionalClasses}`}>
+    <h1 className={`text-balance inline-block bg-gradient-to-t from-base-content/20 from-25% to-base-content text-transparent bg-clip-text ${additionalClasses} ${getFontWeight()} ${getTextSize()} `}>
       {title}
     </h1>
   )
