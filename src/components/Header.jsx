@@ -29,39 +29,41 @@ const MenuOptions = () => {
   return (
     <>
       <li>
-        <Link to={'/'} onClick={handleMenuItemClick}>Home</Link>
+        <Link to={"/"} onClick={handleMenuItemClick}>
+          Home
+        </Link>
       </li>
       <li>
         <details>
           <summary onClick={handleNewMenuClick}>Services</summary>
           <ul className="p-2">
             <li>
-              <Link to={'/'} onClick={handleMenuItemClick}>Submenu 1</Link>
+              <Link to={"/"} onClick={handleMenuItemClick}>
+                Submenu 1
+              </Link>
             </li>
             <li>
-              <Link to={'/'} onClick={handleMenuItemClick}>Submenu 2</Link>
+              <Link to={"/"} onClick={handleMenuItemClick}>
+                Submenu 2
+              </Link>
             </li>
           </ul>
         </details>
       </li>
       <li>
-        <details>
-          <summary onClick={handleNewMenuClick}>Portfolio</summary>
-          <ul className="p-2">
-            <li>
-              <Link to={'/portfolio'} onClick={handleMenuItemClick}>Summary</Link>
-            </li>
-            <li>
-              <Link to={'/'} onClick={handleMenuItemClick}>Submenu 2</Link>
-            </li>
-          </ul>
-        </details>
+        <Link to={"/portfolio"} onClick={handleMenuItemClick}>
+          Portfolio
+        </Link>
       </li>
       <li>
-        <Link to={'/aboutus'} onClick={handleMenuItemClick}>About Us</Link>
+        <Link to={"/aboutus"} onClick={handleMenuItemClick}>
+          About Us
+        </Link>
       </li>
       <li>
-        <Link to={'/contactus'} onClick={handleMenuItemClick}>Contact</Link>
+        <Link to={"/contactus"} onClick={handleMenuItemClick}>
+          Contact
+        </Link>
       </li>
     </>
   );
@@ -80,7 +82,7 @@ const Header = () => {
   }, []);
 
   const handleMobileMenuClick = (e) => {
-    e.stopPropagation()
+    e.stopPropagation();
     console.log(document.activeElement.tagName);
     if (e.target.tagName !== "SUMMARY") {
       if (openDropdown) {
@@ -91,14 +93,18 @@ const Header = () => {
   };
 
   const handleLogoClick = (e) => {
-    e.stopPropagation()
+    e.stopPropagation();
     if (openDropdown) setOpenDropdown(false);
-  }
+  };
 
   return (
     <div className="navbar bg-base-100" onClick={handleMobileMenuClick}>
       <div className="navbar-start">
-        <Link to={'/'} className="btn btn-ghost text-xl h-16 w-68 text-primary z-[1]" onClick={handleLogoClick}>
+        <Link
+          to={"/"}
+          className="btn btn-ghost text-xl h-16 w-68 text-primary z-[1]"
+          onClick={handleLogoClick}
+        >
           <RBIFullIcon />
         </Link>
       </div>
@@ -107,9 +113,17 @@ const Header = () => {
           <MenuOptions />
         </ul>
       </div>
-      <div className="navbar-end">{/* <Link className="btn">Button</Link> */}</div>
+      <div className="navbar-end">
+        {/* <Link className="btn">Button</Link> */}
+      </div>
       <div className="dropdown" onClick={handleMobileMenuClick}>
-        <div tabIndex={0} role="button" className={`btn btn-ghost lg:hidden swap ${openDropdown && "swap-active"}`}>
+        <div
+          tabIndex={0}
+          role="button"
+          className={`btn btn-ghost lg:hidden swap ${
+            openDropdown && "swap-active"
+          }`}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5 swap-off"

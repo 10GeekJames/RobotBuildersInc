@@ -3,9 +3,44 @@ import Project from "./Project";
 import projectData from "../../data/projects";
 
 const ProjectCarousel = () => {
+
+  const goTo = (event) => {
+    event.preventDefault()
+    const btn = event.currentTarget;
+
+    //Equivalent
+    //const carousel = document.querySelector('.carousel')
+    // const carousel = btn.parentElement!.parentElement!.parentElement!
+    const carousel = document.querySelector('#imageCarousel')
+
+    const href = btn.getAttribute('href')
+    const target = carousel.querySelector(href)
+    const left = target.offsetLeft
+    carousel.scrollTo({ left: left })
+  }
+
   return (
-    <>
-      <div className="carousel w-full">
+    <div className="flex flex-col-reverse lg:grid lg:grid-cols-4 justify-center gap-4">
+      <div className="flex flex-col w-full py-2 gap-2 col-span-1 max-h-72 lg:max-h-96 overflow-y-auto">
+        {projectData.map((project, index) => {
+          return (
+            <a
+              key={project.name}
+              href={`#item${index + 1}`}
+              className="btn btn-lg"
+              onClick={goTo}
+            >
+              <div className="grid grid-cols-8">
+                <div className="col-span-1">
+                  {project.logo}
+                </div>
+                <span className="text-lg font-bold lg:text-start col-span-7 text-balance ml-4">{project.name}</span>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+      <div id="imageCarousel" className="carousel w-full col-span-3">
         {projectData.map((project, index) => {
           return (
             <div key={project.name} id={`item${index + 1}`} className="carousel-item w-full">
@@ -20,25 +55,7 @@ const ProjectCarousel = () => {
           );
         })}
       </div>
-      <div className="flex flex-wrap justify-center w-full py-2 gap-2">
-        {projectData.map((project, index) => {
-          return (
-            <a
-              key={project.name}
-              href={`#item${index + 1}`}
-              className="btn btn-lg"
-            >
-              <div className="flex items-center gap-2">
-                <div className="w-12 h-12">
-                  {project.logo}
-                </div>
-                <span className="text-xl font-bold">{project.name}</span>
-              </div>
-            </a>
-          );
-        })}
-      </div>
-    </>
+    </div>
   );
 };
 
