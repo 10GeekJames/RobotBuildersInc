@@ -2967,6 +2967,15 @@ html {
   scroll-snap-align: end;
 }
 
+.chat {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -3345,6 +3354,18 @@ html {
 .navbar-end {
   width: 50%;
   justify-content: flex-end;
+}
+
+.progress {
+  position: relative;
+  width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  overflow: hidden;
+  height: 0.5rem;
+  border-radius: var(--rounded-box, 1rem);
+  background-color: var(--fallback-bc,oklch(var(--bc)/0.2));
 }
 
 .radio {
@@ -3846,6 +3867,51 @@ html {
   }
 }
 
+.progress::-moz-progress-bar {
+  border-radius: var(--rounded-box, 1rem);
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-bc,oklch(var(--bc)/var(--tw-bg-opacity)));
+}
+
+.progress:indeterminate {
+  --progress-color: var(--fallback-bc,oklch(var(--bc)/1));
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--progress-color) -1%,
+    var(--progress-color) 10%,
+    transparent 10%,
+    transparent 90%
+  );
+  background-size: 200%;
+  background-position-x: 15%;
+  animation: progress-loading 5s ease-in-out infinite;
+}
+
+.progress::-webkit-progress-bar {
+  border-radius: var(--rounded-box, 1rem);
+  background-color: transparent;
+}
+
+.progress::-webkit-progress-value {
+  border-radius: var(--rounded-box, 1rem);
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-bc,oklch(var(--bc)/var(--tw-bg-opacity)));
+}
+
+.progress:indeterminate::-moz-progress-bar {
+  background-color: transparent;
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--progress-color) -1%,
+    var(--progress-color) 10%,
+    transparent 10%,
+    transparent 90%
+  );
+  background-size: 200%;
+  background-position-x: 15%;
+  animation: progress-loading 5s ease-in-out infinite;
+}
+
 @keyframes progress-loading {
   50% {
     background-position-x: -115%;
@@ -4238,6 +4304,10 @@ html {
   top: 5rem;
 }
 
+.top-24 {
+  top: 6rem;
+}
+
 .z-\[1\] {
   z-index: 1;
 }
@@ -4261,6 +4331,11 @@ html {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .mb-16 {
@@ -4311,12 +4386,12 @@ html {
   height: 3rem;
 }
 
-.h-2 {
-  height: 0.5rem;
+.h-16 {
+  height: 4rem;
 }
 
-.h-32 {
-  height: 8rem;
+.h-2 {
+  height: 0.5rem;
 }
 
 .h-48 {
@@ -4337,18 +4412,6 @@ html {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-24 {
-  height: 6rem;
-}
-
-.h-20 {
-  height: 5rem;
-}
-
-.h-16 {
-  height: 4rem;
 }
 
 .max-h-48 {
@@ -4375,10 +4438,6 @@ html {
   width: 75%;
 }
 
-.w-48 {
-  width: 12rem;
-}
-
 .w-5 {
   width: 1.25rem;
 }
@@ -4397,22 +4456,6 @@ html {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-56 {
-  width: 14rem;
-}
-
-.w-60 {
-  width: 15rem;
-}
-
-.w-64 {
-  width: 16rem;
-}
-
-.w-72 {
-  width: 18rem;
 }
 
 .max-w-2xl {
@@ -4577,6 +4620,11 @@ html {
 
 .bg-black\/70 {
   background-color: rgb(0 0 0 / 0.7);
+}
+
+.bg-neutral {
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-n,oklch(var(--n)/var(--tw-bg-opacity)));
 }
 
 .bg-primary {

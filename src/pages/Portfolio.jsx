@@ -5,7 +5,7 @@ import SectionWrapper from "../components/shared/SectionWrapper"
 
 const PortFolio = () => {
   return(
-    <SectionWrapper>
+    <SectionWrapper bgColor="bg-neutral">
       <SectionBadge title="Portfolio" />
       <GradientTitle title="We have built some of our ideas, let us build some of yours" />
       <ProjectCarousel />

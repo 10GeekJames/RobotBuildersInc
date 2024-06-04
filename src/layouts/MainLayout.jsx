@@ -28,7 +28,7 @@ function MainLayout() {
 
   return (
     <>
-      <div className='absolute right-4 top-20 z-[1]'>
+      <div className='absolute right-4 top-24 z-[1]'>
         <LightDarkToggle theme={theme} handleThemeChange={handleThemeChange} />
       </div>
       <Header />
