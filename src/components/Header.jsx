@@ -102,14 +102,14 @@ const Header = () => {
       <div className="navbar-start">
         <Link
           to={"/"}
-          className="btn btn-ghost text-xl h-16 w-68 text-primary z-[1]"
+          className="btn btn-ghost h-16 w-68 text-primary z-[1]"
           onClick={handleLogoClick}
         >
           <RBIFullIcon />
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 z-[2]">
+        <ul className="menu menu-horizontal px-1 z-[2] text-lg">
           <MenuOptions />
         </ul>
       </div>
@@ -150,7 +150,7 @@ const Header = () => {
         </div>
         <ul
           tabIndex={0}
-          className="menu menu-sm dropdown-content mt-3 z-[2] p-2 shadow bg-base-100 rounded-box w-52 -translate-x-3/4 lg:-translate-x-full"
+          className="menu menu-md dropdown-content mt-3 z-[2] p-2 shadow bg-base-100 rounded-box w-52 -translate-x-3/4 lg:-translate-x-full"
         >
           <MenuOptions />
         </ul>

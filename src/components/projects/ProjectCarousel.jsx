@@ -15,8 +15,10 @@ const ProjectCarousel = () => {
 
     const href = btn.getAttribute('href')
     const target = carousel.querySelector(href)
+    console.log(target);
     const left = target.offsetLeft
-    carousel.scrollTo({ left: left })
+    console.log(left);
+    carousel.scrollTo({ left: left - carousel.offsetWidth, behavior: 'smooth' })
   }
 
   return (
