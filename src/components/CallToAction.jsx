@@ -3,7 +3,7 @@ import SectionWrapper from "./shared/SectionWrapper";
 
 const CallToAction = () => {
   return (
-    <SectionWrapper bgColor="bg-base-200">
+    <SectionWrapper additionalClasses="bg-base-200">
       <div id="contact" className="grid lg:grid-cols-2 text-start overflow-hidden">
         <div className="flex flex-col gap-8 justify-center items-center text-center lg:text-start lg:items-start order-2 lg:order-1">
           <GradientTitle title="Ready to make your dream a reality, get prototype ready?" textSize="lg" fontWeight="medium" />

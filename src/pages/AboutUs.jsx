@@ -4,7 +4,7 @@ import SectionWrapper from "../components/shared/SectionWrapper";
 const AboutUs = () => {
   return (
     <>
-      <SectionWrapper bgColor="bg-neutral bg-opacity-60">
+      <SectionWrapper additionalClasses="bg-neutral bg-opacity-60">
         <GradientTitle title="About Us" />
         <p className="text-lg max-w-2xl mx-auto my-8 text-neutral-content">
           RobotBuildersInc is more than just a software development company; we're

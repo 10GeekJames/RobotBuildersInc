@@ -22,7 +22,11 @@ const ThemeController = ({theme, handleThemeChange}) => {
   return (
     <div className="dropdown mb-72" onClick={handleThemeMenuClick}>
       <div tabIndex={0} role="button" className="btn m-1">
-        Theme
+        {(theme == "default") || (theme == "dark") || (theme == "light") ? (
+          "Theme"
+        ) : (
+          <span>{theme.charAt(0).toUpperCase() + theme.slice(1)}</span>
+        )}
         <svg
           width="12px"
           height="12px"
