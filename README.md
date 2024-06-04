@@ -12,3 +12,9 @@ Currently, two official plugins are available:
 
 # Tailwindcss
 npx tailwindcss -i ./src/styles/editindex.css -o ./src/styles/staticindex.css --watch
+
+# Development
+yarn install
+yarn dev
+
+(npm will likely work as well)
