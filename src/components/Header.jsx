@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import RBIIcon from "./icons/RBIIcon";
+import RBIFullIcon from "./icons/RBIFullIcon";
 
 const MenuOptions = () => {
   const handleMenuItemClick = (e) => {
@@ -27,17 +29,17 @@ const MenuOptions = () => {
   return (
     <>
       <li>
-        <Link to={'/home'} onClick={handleMenuItemClick}>Home</Link>
+        <Link to={'/'} onClick={handleMenuItemClick}>Home</Link>
       </li>
       <li>
         <details>
           <summary onClick={handleNewMenuClick}>Services</summary>
           <ul className="p-2">
             <li>
-              <Link to={'/home'} onClick={handleMenuItemClick}>Submenu 1</Link>
+              <Link to={'/'} onClick={handleMenuItemClick}>Submenu 1</Link>
             </li>
             <li>
-              <Link to={'/home'} onClick={handleMenuItemClick}>Submenu 2</Link>
+              <Link to={'/'} onClick={handleMenuItemClick}>Submenu 2</Link>
             </li>
           </ul>
         </details>
@@ -50,7 +52,7 @@ const MenuOptions = () => {
               <Link to={'/portfolio'} onClick={handleMenuItemClick}>Summary</Link>
             </li>
             <li>
-              <Link to={'/home'} onClick={handleMenuItemClick}>Submenu 2</Link>
+              <Link to={'/'} onClick={handleMenuItemClick}>Submenu 2</Link>
             </li>
           </ul>
         </details>
@@ -91,7 +93,9 @@ const Header = () => {
   return (
     <div className="navbar bg-base-100" onClick={handleMobileMenuClick}>
       <div className="navbar-start">
-        <Link className="btn btn-ghost text-xl ">RobotBuildersInc</Link>
+        <Link className="btn btn-ghost text-xl h-16 w-68 text-primary">
+          <RBIFullIcon />
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 z-[2]">

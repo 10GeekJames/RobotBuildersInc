@@ -13,12 +13,11 @@ import PortFolio from './pages/Portfolio.jsx';
 
 const router = createBrowserRouter([
   {
-    path: "/",
     element: <MainLayout />,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "/home",
+        path: "/",
         element: <App />,
       },
       {

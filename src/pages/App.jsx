@@ -14,7 +14,7 @@ function App() {
       <Hero />
       <Features />
       <Values />
-      <Tesitmonials />
+      {/* <Tesitmonials /> */}
       <SectionWrapper >
         <div className="flex flex-col gap-8 justify-center items-center text-center">
           <GradientTitle title="See what we have been up to." textSize="lg" fontWeight="medium" />
