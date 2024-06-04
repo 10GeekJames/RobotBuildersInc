@@ -4910,6 +4910,10 @@ html {
 }
 
 @media (min-width: 768px) {
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .md\:place-self-center {
     place-self: center;
   }
@@ -4931,10 +4935,6 @@ html {
 
   .lg\:order-2 {
     order: 2;
-  }
-
-  .lg\:-mr-10 {
-    margin-right: -2.5rem;
   }
 
   .lg\:-mr-1 {
@@ -5044,16 +5044,12 @@ html {
     padding: 8rem;
   }
 
-  .lg\:pr-2 {
-    padding-right: 0.5rem;
+  .lg\:pl-4 {
+    padding-left: 1rem;
   }
 
   .lg\:pr-4 {
     padding-right: 1rem;
-  }
-
-  .lg\:pl-4 {
-    padding-left: 1rem;
   }
 
   .lg\:text-start {
