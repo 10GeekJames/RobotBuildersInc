@@ -2,9 +2,9 @@ import ThemeController from "./shared/ThemeController";
 
 const Footer = ({theme, handleThemeChange}) => {
   return (
-    <div className="bg-base-300">
+    <div>
       <footer className="footer relative p-10 bg-base-300 text-base-content container mx-auto">
-        <div className="absolute right-0 top-0">
+        <div className="absolute right-8 top-8 h-full">
           <ThemeController theme={theme} handleThemeChange={handleThemeChange} />
         </div>
         <nav>

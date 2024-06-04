@@ -1,16 +1,6 @@
 import { useEffect, useState } from "react";
 
 const ThemeController = ({theme, handleThemeChange}) => {
-  // const [theme, setTheme] = useState(localStorage.getItem("theme") || "default");
-
-  // const handleThemeChange = (e) => {
-  //   setTheme(e.target.value);
-  // };
-
-  // useEffect(() => {
-  //   localStorage.setItem("theme", theme);
-  //   document.documentElement.setAttribute("data-theme", theme);
-  // }, [theme]);
 
   return (
     <div className="dropdown mb-72">

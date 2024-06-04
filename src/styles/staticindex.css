@@ -4304,6 +4304,30 @@ html {
   top: 6rem;
 }
 
+.right-12 {
+  right: 3rem;
+}
+
+.top-12 {
+  top: 3rem;
+}
+
+.right-8 {
+  right: 2rem;
+}
+
+.top-8 {
+  top: 2rem;
+}
+
+.top-4 {
+  top: 1rem;
+}
+
+.top-6 {
+  top: 1.5rem;
+}
+
 .z-\[1\] {
   z-index: 1;
 }
@@ -4412,6 +4436,10 @@ html {
 
 .max-h-48 {
   max-height: 12rem;
+}
+
+.max-h-full {
+  max-height: 100%;
 }
 
 .min-h-screen {
