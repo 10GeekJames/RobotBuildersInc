@@ -4434,10 +4434,6 @@ html {
   max-height: 18rem;
 }
 
-.max-h-full {
-  max-height: 100%;
-}
-
 .min-h-screen {
   min-height: 100vh;
 }
@@ -4458,6 +4454,10 @@ html {
   width: 75%;
 }
 
+.w-32 {
+  width: 8rem;
+}
+
 .w-5 {
   width: 1.25rem;
 }
@@ -4476,6 +4476,15 @@ html {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-28 {
+  width: 7rem;
+}
+
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .max-w-2xl {
@@ -4790,34 +4799,9 @@ html {
   line-height: 2rem;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1.25;
-}
-
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1.35;
-}
-
-.text-7xl {
-  font-size: 4.5rem;
-  line-height: 1.35;
-}
-
-.text-8xl {
-  font-size: 6rem;
-  line-height: 1.35;
-}
-
-.text-9xl {
-  font-size: 8rem;
-  line-height: 1.35;
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-lg {
@@ -4833,11 +4817,6 @@ html {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .font-bold {
@@ -4968,6 +4947,10 @@ html {
 
   .lg\:h-96 {
     height: 24rem;
+  }
+
+  .lg\:h-16 {
+    height: 4rem;
   }
 
   .lg\:max-h-96 {

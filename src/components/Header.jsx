@@ -102,7 +102,7 @@ const Header = () => {
       <div className="navbar-start">
         <Link
           to={"/"}
-          className="btn btn-ghost h-16 w-68 text-primary z-[1]"
+          className="btn btn-ghost lg:h-16 lg:w-68 text-primary z-[1]"
           onClick={handleLogoClick}
         >
           <RBIFullIcon />
