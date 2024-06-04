@@ -2,8 +2,8 @@ import ThemeController from "./shared/ThemeController";
 
 const Footer = ({theme, handleThemeChange}) => {
   return (
-    <div>
-      <footer className="footer relative p-10 bg-base-300 text-base-content container mx-auto">
+    <div className="bg-base-300">
+      <footer className="footer relative p-10 text-base-content container mx-auto">
         <div className="absolute right-8 top-8 h-full">
           <ThemeController theme={theme} handleThemeChange={handleThemeChange} />
         </div>
@@ -28,7 +28,7 @@ const Footer = ({theme, handleThemeChange}) => {
           <a className="link link-hover">Cookie policy</a>
         </nav>
       </footer>
-      <footer className="footer px-10 py-4 border-t bg-base-300 text-base-content border-base-300 container mx-auto">
+      <footer className="footer px-10 py-4 border-t text-base-content border-base-300 container mx-auto">
         <aside className="items-center grid-flow-col">
           <svg
             width="24"

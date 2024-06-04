@@ -1,9 +1,26 @@
 import { useEffect, useState } from "react";
 
 const ThemeController = ({theme, handleThemeChange}) => {
+  const [openDropdown, setOpenDropdown] = useState(false);
+
+  useEffect(() => {
+    document.addEventListener("click", () => {
+      if (document.activeElement.tagName == "BODY") {
+        // console.log("body clicked");
+        setOpenDropdown(false);
+      }
+    });
+  }, []);
+
+  const handleThemeMenuClick = (e) => {
+    if (openDropdown) {
+      document.activeElement.blur();
+    }
+    setOpenDropdown(!openDropdown);
+  };
 
   return (
-    <div className="dropdown mb-72">
+    <div className="dropdown mb-72" onClick={handleThemeMenuClick}>
       <div tabIndex={0} role="button" className="btn m-1">
         Theme
         <svg
