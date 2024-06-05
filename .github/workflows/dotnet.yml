@@ -25,7 +25,20 @@ jobs:
     - name: Build
       run: dotnet build --no-restore    
     - name: Deploy
-      uses: peaceiris/actions-gh-pages@v4
+      uses: EasyDesk/action-dotnet-publish@v1
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./public
+        # (Optional) The path to the project that should be published.
+        # If not specified, defaults to '.'.
+        path: './docs'
+
+        # (Optional) Additional command line arguments to be passed to 'dotnet test'.
+        # If not specified, defaults to 'packages'.
+        output-dir: '<path-to-output-dir>'
+
+        # (Optional) The build configuration.
+        # If not specified, defaults to 'Release'.
+        build-configuration: Release
+
+        # (Optional) Whether to skip the build using the '--no-build' flag.
+        # If not specified, defaults to true.
+        skip-build: true
